@@ -46,12 +46,3 @@ price = "100.50"
 height = "55"
 print(int(height))
 print(int(float(price)))
-
-
-
-
-
-
-
-
-
