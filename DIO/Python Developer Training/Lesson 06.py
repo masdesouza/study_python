@@ -1,5 +1,5 @@
 '''
-Study about conditional and loops structures in Python
+Study about conditional in Python
 '''
 
 #If statement - Conditional structure in Python
