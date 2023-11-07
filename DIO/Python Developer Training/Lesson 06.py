@@ -121,9 +121,9 @@ else:
     sys.exit("Invalid option!")
 
 
-#If ternary statement - Conditional structure in Python
-#Allow to write a conditional structure in a single line
-#It is not recommended to use it when the conditional structure is too complex
+#Ternary if statement - Conditional structure in Python
+# Allow to write a conditional structure in a single line
+# It is not recommended to use it when the conditional structure is too complex
 #Example:
 
 balance = 2000
