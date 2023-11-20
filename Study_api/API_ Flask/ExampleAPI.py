@@ -17,9 +17,26 @@ def homepage():
 def get_contacts():
     return "Here is the list of contacts"
 
+@app.route('/contacts/all')
+def get_all_contact():
+    table = pd.read_csv('Study_api\API_ Flask\contacts.csv')
+    
+    return jsonify(table.to_dict())          
+    
 @app.route('/contacts/<string:name>')
 def get_contact(name):
-    table = pd.read_csv('Study_api\contacts.csv')
+    table = pd.read_csv('Study_api\API_ Flask\contacts.csv')
+    for i in range(len(table)):
+        if table['first_name'][i] == name:
+            return jsonify(table.iloc[i].to_dict())          
+            
+        else:
+            return "Contact not found"
+
+
+@app.route('/contacts/name/<string:name>')
+def get_contact_name(name):
+    table = pd.read_csv('Study_api\API_ Flask\contacts.csv')
     for i in range(len(table)):
         if table['first_name'][i] == name:
             name = table['first_name'][i] + ' ' + table['last_name'][i]
@@ -37,7 +54,7 @@ def get_contact(name):
 
 @app.route('/get_sales')
 def get_sales():
-    table = pd.read_csv('Study_api\sales.csv')
+    table = pd.read_csv('API_Flask\sales.csv')
     print(table)
     total_sales = table['Vendas'].sum()
     return jsonify({'total_sales': total_sales})
