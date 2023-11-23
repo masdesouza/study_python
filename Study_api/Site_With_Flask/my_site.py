@@ -29,4 +29,16 @@ if __name__ == '__main__':
 
 
 # Deploying a Flask App to Heroku
-#    
+#  git init
+#  heroku login
+#  heroku create mysite
+#  heroku git:remote -a mysite
+#  git add .
+#  git commit -m "first commit"
+#  git push heroku master
+# 
+#  heroku login
+#  git add.
+#  git commit -m "first commit"
+#  git push heroku master
+ 
