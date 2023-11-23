@@ -29,8 +29,12 @@ if __name__ == '__main__':
 
 
 # Deploying a Flask App to Heroku
-#  git init
+#  pip install gunicorn
+#  Create a file called Procfile and add the following line:
+#  web: gunicorn mysite:app
+#  pip freeze > requirements.txt
 #  heroku login
+#  git init
 #  heroku create mysite
 #  heroku git:remote -a mysite
 #  git add .
