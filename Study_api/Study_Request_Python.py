@@ -1,8 +1,11 @@
-# Use to interact with API's
+'''
+ Using request library to interact with API's
+
+ '''
 import requests
 
 # Get data - GET request
-'''
+
 # API to get data from AwesomeAPI
 link = 'https://economia.awesomeapi.com.br/json/all'
 #link = 'https://economia.awesomeapi.com.br/json/last/:moedas'
@@ -15,7 +18,6 @@ link = 'https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL'
 req = requests.get(link)
 print(req.json())
 
-'''
 
 #Examples of API's using Firebase 
 # https://firebase.google.com/docs/reference/rest/database
@@ -60,17 +62,7 @@ req = requests.get(link)
 print(req.json())
 
 # Put data - PUT request - Update data replacing the previous all data
-'''data = {'name': 'Pedro', 'age': 16}
+data = {'name': 'Pedro', 'age': 16}
 req = requests.put(link , data=json.dumps(data))
 req = requests.get(link) 
-print(req.json())'''
-
-
-# Head data - HEAD request
-
-
-# Options data - OPTIONS request
-
-# Trace data - TRACE request
-
-
+print(req.json())
