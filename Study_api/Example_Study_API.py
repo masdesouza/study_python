@@ -9,7 +9,6 @@
 # API to get data from AwesomeAPI
 #Install requests - pip install requests
 import requests
-import json
 
 exchange = requests.get('https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL')
 print(exchange.status_code)
@@ -23,8 +22,20 @@ exchange_BTC = exchange_json['BTCBRL']['bid']
 print(exchange_BTC)
 
 
-# API to post data from Twillo
-#Install Twillo - pip install twilio
+# API to get data from IBGE
+# List of all states in Brazil
+ibge = requests.get('http://servicodados.ibge.gov.br/api/v1/localidades/estados')
+print(ibge.status_code)
+ibge_json = ibge.json()
+print(ibge_json)
+
+
+# API to post data from Twilio
+#Install Twilio - pip install twilio
+
+
+
+
 
 
 
