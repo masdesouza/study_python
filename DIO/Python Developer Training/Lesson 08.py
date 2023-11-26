@@ -213,11 +213,3 @@ txt = f'''I am Python developer
 and might call me {name}.'''
 
 print(txt)
-
-
-
-
-
-
-
-
