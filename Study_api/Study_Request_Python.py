@@ -1,5 +1,6 @@
 '''
  Using request library to interact with API's
+ Examples of API's using Firebase
 
  '''
 import requests
@@ -63,6 +64,9 @@ print(req.json())
 
 # Put data - PUT request - Update data replacing the previous all data
 data = {'name': 'Pedro', 'age': 16}
-req = requests.put(link , data=json.dumps(data))
+req = requests.put(link , data=(data))
 req = requests.get(link) 
 print(req.json())
+
+
+
